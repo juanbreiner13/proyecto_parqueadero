@@ -1,0 +1,14 @@
+Historial de usuario 001
+Como dueño del parqueadero, me gustaría contar con un sistema que registra y supervisa el ingreso de vehículos, a fin de optimizar el control y la gestión del flujo de entrada en las instalaciones.
+
+Historial de usuario 002
+Como dueño del parqueadero, busco una aplicación que facilite la gestión del proceso de salida de vehículos, para mejorar el control de accesos y garantizar un registro preciso de cada salida.
+
+Historial de usuario 003
+Como dueño del parqueadero, quiero una función que genere automáticamente facturas para los vehículos registrados, de manera que pueda mantener un control del efectivo sobre los pagos y simplificar el proceso de cobro.
+
+Historial de usuario 004
+Como dueño del parqueadero, deseo que la aplicación ofrezca un historial completo de los vehículos que han ingresado y salido, para así tener un registro detallado del uso del parqueadero.
+
+Historial de usuario 005
+Como dueño del parqueadero, necesito una herramienta que recopile un historial exhaustivo de entradas y salidas, con la capacidad de generar informes detallados que ayuden a mejorar el control y la gestión general del parqueadero.

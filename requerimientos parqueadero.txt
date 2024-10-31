@@ -1,0 +1,72 @@
+requerimientos:
+objetivos:  
+1.analizar la problematica para asi recolectar  toda informacion necesaria para el levantamiento de requerimientos que se necesitan para elc ontrol del parqueadero.
+
+2. crear o diseñar una interfaz de usuario amigable para el usuario.
+
+3. Hacer pruebas de testeo en el aplicativo. 
+
+
+REQUERIMIENTOS FUNCIONALES:
+
+1 {registro de vehiculo}
+Descripcion {el sistema permitira hacer un ingreso del vehiculo al entrar a las instalaciones.}
+Entradas {ingreso_hora, Placa}
+salida {ingreso del vehiculo y ocupaciòn del puesto}
+Prioridad {Alta}
+
+2 {control de espacios}
+Descripcion {El sistema debera actualizar el número de espacios que se encuentran ocupados y disponibles en el parqueadero.}
+Entradas {numero_total_espacios}
+salida {notificacion de pocos espacios y notificacion de espacios disponibles en tiempo real }
+Prioridad {Media} 
+
+3 {facturaciòn} 
+Descripcion {el sistema generarà una factura de pago}
+Entradas {horas_totales, valor_porpagar}
+salida {mostrara la placa, la hora de ingreso, la hora de salida y el total a pagar }
+Prioridad {Alta} 
+
+4 {salida de vehiculo}
+Descripcion {el sistema permitira la salida del vehiculo de las instalaciones.}
+Entradas {hora_salida, horas_totales ,total_porpagar}
+salida {salida del vehiculo y liberaciòn del puesto}
+Prioridad {Alta}
+
+5 {historial y reportes}
+Descripcion {El sistema debe generar reportes de los ingresos y salidas de cualquier vehiculo.}
+Entradas {filtros para generar informes}
+salida {visualizaciòn grafica del reporte y descarga del mismo (PDF).}
+Prioridad {Alta} 
+
+
+
+
+Codigo casos de uso:
+
+@startuml
+actor "Administrador" as Admin
+
+rectangle "Sistema de Parqueadero" {
+    usecase "Registrar Vehículo" as UC1
+    usecase "Controlar Espacios" as UC2
+    usecase "Generar Factura" as UC3
+    usecase "Salida de Vehículo" as UC4
+    usecase "Generar Historial y Reportes" as UC5
+}
+
+Admin --> UC1 : Ingreso de vehículo Hora de ingreso
+Admin --> UC2 : Actualizar espacios Número total de espacios
+Admin --> UC3 : Generar factura Horas totales, Valor a pagar
+Admin --> UC4 : Procesar salida Hora de salida, Total a pagar
+Admin --> UC5 : Solicitar reportes Filtros para informes
+
+UC1 --> UC4 : Dependencia (Salida del vehículo
+UC2 --> UC1 : Actualiza espacio al ingresar
+UC2 --> UC4 : Actualiza espacio al salir
+UC3 --> UC4 : Genera factura antes de salida
+UC5 --> Admin : Visualización y descarga\n(Informe en PDF)
+
+@enduml
+
+
